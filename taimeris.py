@@ -3,7 +3,7 @@
 import sleep from time
 
 # Funkcija veic laika atskaiti
-def taimeris(h, m, s):
+def atskaite(h, m, s):
   pass 
   # TODO: Sastādi taimera algoritmu!
 
@@ -12,4 +12,4 @@ h = int(input("Stundas: "))
 m = int(input("Minūtes: "))
 s = int(input("Sekundes: "))
 
-taimeris(h, m, s)
+atskaite(h, m, s)
