@@ -3,7 +3,7 @@
 Lai veiktu precīzu laika atskaiti, lieto taimeri, kas noteiktā intervālā laiku skaita atpakaļ, kamēr sasniedz 00:00:00.
 
 ### Specifikācija:<br>
-Dotajā failā *timer.py* ir dotas funkcijas:
+Dotajā failā *taimeris.py* ir dotas funkcijas:
 * ievads() - prasa ievadīt stundas, minūtes un sekundes 
 * dati_korekti() - pārbauda ievaddatus
   * ja stundas nav intervālā no 0 līdz 23 (ieskaitot), atgriež False
