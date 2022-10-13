@@ -1,169 +1,22 @@
-import taimeris
-
-def test_4s():
-  assert taimeris.atskaite(0, 0, 4) == """00:00:04\n
-                                00:00:03\n
-                                00:00:02\n
-                                00:00:01\n
-                                00:00:00"""
-  
-def test_10s():
-  assert taimeris.atskaite(0, 0, 10) == """00:00:10\n
-                                00:00:09\n
-                                00:00:08\n
-                                00:00:07\n
-                                00:00:06\n
-                                00:00:05\n
-                                00:00:04\n
-                                00:00:03\n
-                                00:00:02\n
-                                00:00:01\n
-                                00:00:00"""
-  
-def test_2m4s():
-  assert taimeris.atskaite(0, 2, 4) == """00:02:04\n
-                                00:02:03\n
-                                00:02:02\n
-                                00:02:01\n
-                                00:02:00\n
-                                00:01:59\n
-                                00:01:58\n
-                                00:01:57\n
-                                00:01:56\n
-                                00:01:55\n
-                                00:01:54\n
-                                00:01:53\n
-                                00:01:52\n
-                                00:01:51\n
-                                00:01:50\n
-                                00:01:49\n
-                                00:01:48\n
-                                00:01:47\n
-                                00:01:46\n
-                                00:01:45\n
-                                00:01:44\n
-                                00:01:43\n
-                                00:01:42\n
-                                00:01:41\n
-                                00:01:40\n
-                                00:01:39\n
-                                00:01:38\n
-                                00:01:37\n
-                                00:01:36\n
-                                00:01:35\n
-                                00:01:34\n
-                                00:01:33\n
-                                00:01:32\n
-                                00:01:31\n
-                                00:01:30\n
-                                00:01:29\n
-                                00:01:28\n
-                                00:01:27\n
-                                00:01:26\n
-                                00:01:25\n
-                                00:01:24\n
-                                00:01:23\n
-                                00:01:22\n
-                                00:01:21\n
-                                00:01:20\n
-                                00:01:19\n
-                                00:01:18\n
-                                00:01:17\n
-                                00:01:16\n
-                                00:01:15\n
-                                00:01:14\n
-                                00:01:13\n
-                                00:01:12\n
-                                00:01:11\n
-                                00:01:10\n
-                                00:01:09\n
-                                00:01:08\n
-                                00:01:07\n
-                                00:01:06\n
-                                00:01:05\n
-                                00:01:04\n
-                                00:01:03\n
-                                00:01:02\n
-                                00:01:01\n
-                                00:01:00\n
-                                00:00:59\n
-                                00:00:58\n
-                                00:00:57\n
-                                00:00:56\n
-                                00:00:55\n
-                                00:00:54\n
-                                00:00:53\n
-                                00:00:52\n
-                                00:00:51\n
-                                00:00:50\n
-                                00:00:49\n
-                                00:00:48\n
-                                00:00:47\n
-                                00:00:46\n
-                                00:00:45\n
-                                00:00:44\n
-                                00:00:43\n
-                                00:00:42\n
-                                00:00:41\n
-                                00:00:40\n
-                                00:00:39\n
-                                00:00:38\n
-                                00:00:37\n
-                                00:00:36\n
-                                00:00:35\n
-                                00:00:34\n
-                                00:00:33\n
-                                00:00:32\n
-                                00:00:31\n
-                                00:00:30\n
-                                00:00:29\n
-                                00:00:28\n
-                                00:00:27\n
-                                00:00:26\n
-                                00:00:25\n
-                                00:00:24\n
-                                00:00:23\n
-                                00:00:22\n
-                                00:00:21\n
-                                00:00:20\n
-                                00:00:19\n
-                                00:00:18\n
-                                00:00:17\n
-                                00:00:16\n
-                                00:00:15\n
-                                00:00:14\n
-                                00:00:13\n
-                                00:00:12\n
-                                00:00:11\n
-                                00:00:10\n
-                                00:00:09\n
-                                00:00:08\n
-                                00:00:07\n
-                                00:00:06\n
-                                00:00:05\n
-                                00:00:04\n
-                                00:00:03\n
-                                00:00:02\n
-                                00:00:01\n
-                                00:00:00"""
+from taimeris import dati_korekti
   
 def test_neg_h():
-  assert taimeris.dati_korekti(-4, 0, 0) == False
+  assert dati_korekti(-4, 0, 0) is False
   
 def test_neg_m():
-  assert taimeris.dati_korekti(0, -2, 0) == False
+  assert dati_korekti(0, -2, 0) is False
   
 def test_neg_s():
-  assert taimeris.dati_korekti(0, 0, -6) == False
+  assert dati_korekti(0, 0, -6) is False
   
 def test_invalid_h():
-  assert taimeris.dati_korekti(27, 0, 0) == False
+  assert dati_korekti(27, 0, 0) is False
   
 def test_invalid_m():
-  assert taimeris.dati_korekti(0, 63, 0) == False
+  assert dati_korekti(0, 63, 0) is False
   
 def test_invalid_s():
-  assert taimeris.dati_korekti(0, 0, 70) == False
+  assert dati_korekti(0, 0, 70) is False
   
 def test_valid_time():
-  assert taimeris.dati_korekti(2, 45, 13) == True
+  assert dati_korekti(2, 45, 13) is True
