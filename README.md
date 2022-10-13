@@ -2,7 +2,7 @@
 ### Problēmas apraksts:<br>
 Lai veiktu precīzu laika atskaiti, lieto taimeri, kas noteiktā intervālā laiku skaita atpakaļ, kamēr sasniedz 00:00:00.
 
-### Nosacījumi:<br>
+### Specifikācija:<br>
 Dotajā failā *timer.py* ir dotas funkcijas:
 * ievads() - prasa ievadīt stundas, minūtes un sekundes 
 * dati_korekti() - pārbauda ievaddatus
@@ -11,7 +11,10 @@ Dotajā failā *timer.py* ir dotas funkcijas:
   * citādi atgriež True
 * atskaite - izdrukā laika atskaiti pareizā formātā
 
-Tavs uzdevums ir sastādīt ciklisku algoritmu, kas veic precīzu laika atskaiti un veic izdruku ekrānā reizi sekundē.<br>
+### Nosacījumi:<br>
+Tavs uzdevums ir 
+* sastādīt algoritmu, kas pārbauda ievaddatu pareizību
+* sastādīt ciklisku algoritmu, kas veic precīzu laika atskaiti un veic izdruku ekrānā reizi sekundē.<br>
 
 Lai aizkavētu cikla izpildi, lieto *sleep(delayInSeconds)*
 
