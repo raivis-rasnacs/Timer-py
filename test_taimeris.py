@@ -148,19 +148,22 @@ def test_2m4s():
                                 00:00:00"""
   
 def test_neg_h():
-  assert taimeris.atskaite(-4, 0, 0) == "Kļūda!"
+  assert taimeris.dati_korekti(-4, 0, 0) == False
   
 def test_neg_m():
-  assert taimeris.atskaite(0, -2, 0) == "Kļūda!"
+  assert taimeris.dati_korekti(0, -2, 0) == False
   
 def test_neg_s():
-  assert taimeris.atskaite(0, 0, -6) == "Kļūda!"
+  assert taimeris.dati_korekti(0, 0, -6) == False
   
 def test_invalid_h():
-  assert taimeris.atskaite(27, 0, 0) == "Kļūda!"
+  assert taimeris.dati_korekti(27, 0, 0) == False
   
 def test_invalid_m():
-  assert taimeris.atskaite(0, 63, 0) == "Kļūda!"
+  assert taimeris.dati_korekti(0, 63, 0) == False
   
 def test_invalid_s():
-  assert taimeris.atskaite(0, 0, 70) == "Kļūda!"
+  assert taimeris.dati_korekti(0, 0, 70) == False
+  
+def test_valid_time():
+  assert taimeris.dati_korekti(2, 45, 13) == True
