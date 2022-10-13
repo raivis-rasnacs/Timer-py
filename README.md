@@ -9,7 +9,7 @@ Dotajā failā *taimeris.py* ir dotas funkcijas:
   * ja stundas nav intervālā no 0 līdz 23 (ieskaitot), atgriež False
   * ja minūtes vai sekundes nav intervālā no 0 līdz 59 (ieskaitot), atgriež False
   * citādi atgriež True
-* atskaite - izdrukā laika atskaiti pareizā formātā
+* atskaite() - izdrukā laika atskaiti pareizā formātā
 
 ### Nosacījumi:<br>
 Tavs uzdevums ir 
