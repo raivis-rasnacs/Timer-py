@@ -1,6 +1,6 @@
 # --- uzvārds, klase ---
 
-import sleep from time
+from time import sleep
 
 # Laika atskaite
 def atskaite(h, m, s):
