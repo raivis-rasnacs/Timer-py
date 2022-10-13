@@ -1,14 +1,14 @@
-import timer
+import taimeris
 
 def test_4s():
-  assert timer.taimeris(0, 0, 4) == """00:00:04\n
+  assert taimeris.atskaite(0, 0, 4) == """00:00:04\n
                                 00:00:03\n
                                 00:00:02\n
                                 00:00:01\n
                                 00:00:00"""
   
 def test_10s():
-  assert timer.taimeris(0, 0, 10) == """00:00:10\n
+  assert taimeris.atskaite(0, 0, 10) == """00:00:10\n
                                 00:00:09\n
                                 00:00:08\n
                                 00:00:07\n
@@ -21,7 +21,7 @@ def test_10s():
                                 00:00:00"""
   
 def test_2m4s():
-  assert timer.taimeris(0, 2, 4) == """00:02:04\n
+  assert taimeris.atskaite(0, 2, 4) == """00:02:04\n
                                 00:02:03\n
                                 00:02:02\n
                                 00:02:01\n
@@ -148,19 +148,19 @@ def test_2m4s():
                                 00:00:00"""
   
 def test_neg_h():
-  assert taimeris(-4, 0, 0) == "Kļūda!"
+  assert taimeris.atskaite(-4, 0, 0) == "Kļūda!"
   
 def test_neg_m():
-  assert taimeris(0, -2, 0) == "Kļūda!"
+  assert taimeris.atskaite(0, -2, 0) == "Kļūda!"
   
 def test_neg_s():
-  assert taimeris(0, 0, -6) == "Kļūda!"
+  assert taimeris.atskaite(0, 0, -6) == "Kļūda!"
   
 def test_invalid_h():
-  assert taimeris(27, 0, 0) == "Kļūda!"
+  assert taimeris.atskaite(27, 0, 0) == "Kļūda!"
   
 def test_invalid_m():
-  assert taimeris(0, 63, 0) == "Kļūda!"
+  assert taimeris.atskaite(0, 63, 0) == "Kļūda!"
   
 def test_invalid_s():
-  assert taimeris(0, 0, 70) == "Kļūda!"
+  assert taimeris.atskaite(0, 0, 70) == "Kļūda!"
