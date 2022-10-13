@@ -19,9 +19,12 @@ def ievads():
   
 def dati_korekti(stundas, minutes, sekundes):
   
-  # TODO: Sastādi datu validācijas algoritmu! 
+  """
+  TODO: Sastādi datu validācijas algoritmu! 
+  Atgriež True, ja dati korekti, citādi False
+  """
   
-  return # Atgriež True, ja dati korekti, citādi False
+  return 
 
-
-ievads()
+if __name__ == "__main__":
+  ievads()
