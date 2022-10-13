@@ -18,13 +18,11 @@ def ievads():
     print("Kļūda!")
   
 def dati_korekti(stundas, minutes, sekundes):
-  
+  pass
   """
   TODO: Sastādi datu validācijas algoritmu! 
   Atgriež True, ja dati korekti, citādi False
   """
-  
-  return 
 
 if __name__ == "__main__":
   ievads()
